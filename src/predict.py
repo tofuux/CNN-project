@@ -7,11 +7,9 @@ from tensorflow.keras.models import load_model
 
 os.makedirs("outputs", exist_ok=True)
 
-# ── Label map: EMNIST byclass order ──────────────────────────────────────────
 # Classes 0-9 → digits, 10-35 → A-Z, 36-61 → a-z
 LABELS = list("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
 
-# ── Config ────────────────────────────────────────────────────────────────────
 MODEL_PATH      = "outputs/best_model.keras"
 IMAGE_PATH      = sys.argv[1] if len(sys.argv) > 1 else "test.png"
 CONF_THRESHOLD  = 0.55
